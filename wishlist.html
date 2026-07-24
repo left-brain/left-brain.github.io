@@ -1,0 +1,141 @@
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Wishlist</title>
+    <style>
+        body {
+            background-color: #000080;
+            color: #00FF00;
+            font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        a { color: #FFFF00; text-decoration: underline; font-weight: bold; }
+        a:hover { color: #FF00FF; cursor: crosshair; }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #000000;
+            border: 5px ridge #C0C0C0;
+        }
+
+        .header { text-align: center; border-bottom: 3px ridge #C0C0C0; padding: 10px; }
+        
+        .marquee-box {
+            background-color: #FF0000;
+            color: #FFFF00;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 3px ridge #C0C0C0;
+        }
+
+        .blink { animation: blinker 0.8s linear infinite; color: #FF00FF; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        .wavy { display: inline-block; }
+        .wavy span {
+            display: inline-block;
+            animation: wave-anim 1.5s infinite;
+        }
+        @keyframes wave-anim {
+            0% { transform: translateY(0); animation-timing-function: ease-out; }
+            25% { transform: translateY(-5px); animation-timing-function: ease-in; }
+            50% { transform: translateY(0); animation-timing-function: ease-out; }
+            75% { transform: translateY(5px); animation-timing-function: ease-in; }
+            100% { transform: translateY(0); }
+        }
+
+        td { vertical-align: top; padding: 15px; }
+        
+        .sidebar {
+            width: 180px;
+            background-color: #008080;
+            border-right: 3px ridge #C0C0C0;
+        }
+
+        .content { width: 620px; }
+        
+        .footer {
+            text-align: center;
+            border-top: 3px ridge #C0C0C0;
+            padding: 10px;
+            font-size: 12px;
+            font-family: "Times New Roman", Times, serif;
+            color: #FFFFFF;
+        }
+
+        .steam-button {
+            display: block;
+            background-color: #FF9900;
+            color: #000000 !important;
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            border: 4px outset #FF9900;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+        .steam-button:active { border-style: inset; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+
+                <td class="content">
+                    
+                    <h2>OOPS</h2>
+                    <p>
+                        So uhhh... ALIEN JUICE sadly doesnt have a steam page yet..
+                        But worry not, it will be coming soon..
+                        In the mean time enjoy this jif of a dust bunny:
+                    </p>
+                    <center>
+                        <img src="media/dust bunny hit.gif" width="400" border="0">
+                    </center>
+                    
+                    <hr size="1" color="#00FF00">
+
+                    <center>
+                        <a href="index.html" class="steam-button">
+                            GO BACK
+                        </a>
+                    </center>
+
+                    <hr size="1" color="#00FF00">
+
+                                       
+                    <center>
+                        </center>
+
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p>Copyright &copy; 2026 tjesse kitchingham. All rights reserved.</p>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.wavy').forEach(function(el) {
+            var text = el.innerText;
+            el.innerHTML = '';
+            for (var i = 0; i < text.length; i++) {
+                var span = document.createElement('span');
+                span.innerText = text[i];
+                if (text[i] === ' ') span.innerHTML = '&nbsp;';
+                span.style.animationDelay = (i * 0.1) + 's';
+                el.appendChild(span);
+            }
+        });
+    </script>
+
+</body>
+</html>

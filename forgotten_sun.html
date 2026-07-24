@@ -1,0 +1,132 @@
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Forgotten Sun</title>
+    <style>
+
+        audio { display: none; }
+
+        .retro-player-btn {
+            background-color: #C0C0C0;
+            border: 3px outset #FFFFFF;
+            padding: 5px 15px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            cursor: pointer;
+            color: #000000;
+        }
+        .retro-player-btn:active { border-style: inset; }
+
+        body {
+            background-color: #000080;
+            color: #ffffff;
+            font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        a { color: #FFFF00; text-decoration: underline; font-weight: bold; }
+        a:hover { color: #FF00FF; cursor: crosshair; }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #000000;
+            border: 5px ridge #C0C0C0;
+        }
+
+        .header { text-align: center; border-bottom: 3px ridge #C0C0C0; padding: 10px; }
+        
+        .marquee-box {
+            background-color: #FF0000;
+            color: #FFFF00;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 3px ridge #C0C0C0;
+        }
+
+        .blink { animation: blinker 0.8s linear infinite; color: #FF00FF; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        .wavy { display: inline-block; }
+        .wavy span {
+            display: inline-block;
+            animation: wave-anim 1.5s infinite;
+        }
+        @keyframes wave-anim {
+            0% { transform: translateY(0); animation-timing-function: ease-out; }
+            25% { transform: translateY(-5px); animation-timing-function: ease-in; }
+            50% { transform: translateY(0); animation-timing-function: ease-out; }
+            75% { transform: translateY(5px); animation-timing-function: ease-in; }
+            100% { transform: translateY(0); }
+        }
+
+        td { vertical-align: top; padding: 15px; }
+        
+        .sidebar {
+            width: 180px;
+            background-color: #008080;
+            border-right: 3px ridge #C0C0C0;
+        }
+
+        .content { width: 620px; }
+        
+        .footer {
+            text-align: center;
+            border-top: 3px ridge #C0C0C0;
+            padding: 10px;
+            font-size: 12px;
+            font-family: "Times New Roman", Times, serif;
+            color: #FFFFFF;
+        }
+
+        .steam-button {
+            display: block;
+            background-color: #FF9900;
+            color: #000000 !important;
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            border: 4px outset #FF9900;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+        .steam-button:active { border-style: inset; }
+    </style>
+</head>
+<body>
+<div class="container">
+        <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="content">
+                    <center>
+                        <img src="media/sun.gif" width="200"> 
+                    </center>                    
+                    <center>
+                        <audio id="musicPlayer" loop>
+                            <source src="media/Forgotten Sun.ogg" type="audio/ogg">
+                        </audio>
+
+                        <button class="retro-player-btn" onclick="togglePlay()">PLAY / PAUSE</button>
+                    </center>
+
+                    <script>
+                        function togglePlay() {
+                            var audio = document.getElementById("musicPlayer");
+                            var btn = document.querySelector(".retro-player-btn");
+                            if (audio.paused) {
+                                audio.play();
+                                btn.innerText = "|| PAUSE";
+                            } else {
+                                audio.pause();
+                                btn.innerText = "> PLAY";
+                            }
+                        }
+                    </script>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

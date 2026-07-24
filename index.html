@@ -1,0 +1,269 @@
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>ALIEN JUICE</title>
+    <style>
+        body {
+            background-color: #000080;
+            color: #00FF00;
+            font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        a { color: #FFFF00; text-decoration: underline; font-weight: bold; }
+        a:hover { color: #FF00FF; cursor: crosshair; }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #000000;
+            border: 5px ridge #C0C0C0;
+        }
+
+        .header { text-align: center; border-bottom: 3px ridge #C0C0C0; padding: 10px; }
+        
+        .marquee-box {
+            background-color: #FF0000;
+            color: #FFFF00;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 3px ridge #C0C0C0;
+        }
+
+        .blink { animation: blinker 0.8s linear infinite; color: #FF00FF; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        .wavy { display: inline-block; }
+        .wavy span {
+            display: inline-block;
+            animation: wave-anim 1.5s infinite;
+        }
+        @keyframes wave-anim {
+            0% { transform: translateY(0); animation-timing-function: ease-out; }
+            25% { transform: translateY(-5px); animation-timing-function: ease-in; }
+            50% { transform: translateY(0); animation-timing-function: ease-out; }
+            75% { transform: translateY(5px); animation-timing-function: ease-in; }
+            100% { transform: translateY(0); }
+        }
+
+        td { vertical-align: top; padding: 15px; }
+        
+        .sidebar {
+            width: 180px;
+            background-color: #008080;
+            border-right: 3px ridge #C0C0C0;
+        }
+
+        .content { width: 620px; }
+        
+        .footer {
+            text-align: center;
+            border-top: 3px ridge #C0C0C0;
+            padding: 10px;
+            font-size: 12px;
+            font-family: "Times New Roman", Times, serif;
+            color: #FFFFFF;
+        }
+
+        .steam-button {
+            display: block;
+            background-color: #FF9900;
+            color: #000000 !important;
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            border: 4px outset #FF9900;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+        .steam-button:active { border-style: inset; }
+
+        .invisible-link {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header">
+            <img src="media/logo.png" alt="Alien Juice Logo" width="400" onerror="this.style.display='none'">
+            <h1>Welcome to <span class="wavy">ALIEN JUICE</span></h1>
+            <p><i>The fastest, juiciest 3D platformer on the world wide web.</i></p>
+        </div>
+
+        <div class="marquee-box">
+            <marquee scrollamount="8">UPDATE [July 2026]: Working on ENEMIES!!! --- GET ALIEN JUICE --- WISHLIST ON STEAM --- DON'T FORGET TO SIGN THE GUESTBOOK!!!</marquee>
+        </div>
+
+        <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="sidebar">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About the Game</a></li>
+                        <li><a href="#moves">Your Moveset</a></li>
+                        <li><a href="#media">Screenshots</a></li>
+                        <li><a href="#demo">Download Demo</a></li>
+                        <li><a href="mailto:tkitchingham@icloud.com">Email the greatest developer ever</a></li>
+                    </ul>
+                    
+                    <br><br>
+                    <center>
+                        <a href="secret.html">
+                            <img src="media/aliensquish.gif" width="100" border="0">
+                        </a>                    
+                    </center>
+                </td>
+
+                <td class="content">
+                    
+                    <h2 id="about">What is Alien Juice?</h2>
+                    <p>
+                        Welcome to my website! Alien Juice is a super duper fast 3D platformer where you play as a tiny alien in a giant invested unknown world. 
+                        You have to run around giant rooms, collect normal juices, and defeat bosses to get the 
+                        <b><span class="wavy">SPECIAL JUICES</span></b> that unlock new powers and moves in your moveset!
+                    </p>
+                    
+                    <p>
+                        The game will have a free demo of the first Chapter <span class="blink">COMING SOON</span>, once the game is done I'm releasing the full game in one go, no episodic releases!!!
+                    </p>
+
+                    <hr size="1" color="#00FF00">
+
+                    <center>
+                        <span class="blink"><b>!!! WARNING !!!</b></span>
+                        <a href="wishlist.html" class="steam-button">
+                            CLICK HERE TO WISHLIST ON STEAM!
+                        </a>
+                    </center>
+
+                    <hr size="1" color="#00FF00">
+
+                    <h2 id="moves">Your Moveset</h2>
+                    <p>Look at these <span class="wavy">SPECTACULAR</span> moves!!!</p>
+                    
+                    <center>
+                        <img src="media/walk.gif" alt="A cool walk gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Walking in all directions</i><br><br>
+                        
+                        <img src="media/jumps.gif" alt="A cool jumping gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Double Jumping</i><br><br>
+
+                        <img src="media/dashes.gif" alt="A cool dashing gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Dashing for <span class="blink">CRAZY</span> speed</i><br><br>
+
+                        <img src="media/groundslams.gif" alt="A cool groundslamming gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Groundslamming in mid air (pressing right after a slam grants a jump boost!!)</i><br><br>
+
+                        <img src="media/walljumps.gif" alt="A cool wall jumping gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Wall Jumping</i><br><br>
+                        
+                        <img src="media/homing.gif" alt="A cool homing gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Lock-On&copy; homing dash</i><br><br>
+
+                        <img src="media/grabbing.gif" alt="A cool grabbing gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Grabbing various thingies</i><br><br>
+
+                        <img src="media/talk.gif" alt="A cool.. talking gif goes here" width="400" border="2" onerror="this.alt='[GIF NOT FOUND]'">
+                        <br><i>Talking</i><br><br>
+                    </center>
+
+                    <br>
+
+                    <hr size="1" color="#00FF00">
+
+                    <h2 id="media">Screenshots</h2>
+                    <p>Look at these <span class="blink">GORGEOUS</span> graphics!!!</p>
+                    
+                    <center>
+                        <img src="media/Screenshot1.png" alt="A cool screenshot goes here" width="400" border="2" onerror="this.alt='[IMAGE NOT FOUND]'">
+                        <br><i>Look at <a href="forgotten_sun.html" class="invisible-link">him</a>!!!</i><br><br>
+                        
+                        <img src="media/Screenshot4.png" alt="Another screenshot" width="400" border="2" onerror="this.alt='[IMAGE NOT FOUND]'">
+                        <br><br>
+
+                        <img src="media/Screenshot2.png" alt="Another screenshot" width="400" border="2" onerror="this.alt='[IMAGE NOT FOUND]'">
+                        <br><br>
+
+                        <img src="media/Screenshot3.png" alt="Another screenshot" width="400" border="2" onerror="this.alt='[IMAGE NOT FOUND]'">
+                        <br><br>                                                
+                    </center>
+
+                    <br>
+                    <h2 id="demo">Demo Download</h2>
+                    <p>The free Chapter 1 Demo is <span class="blink">COMING SOON</span>. Check back later!</p>
+
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p>Copyright &copy; 2026 tjesse kitchingham. All rights reserved.</p>
+            
+            <table border="2" bordercolor="#FFFFFF" bgcolor="#000000" align="center" cellpadding="2">
+                <tr>
+                    <td id="hit-counter" style="color:#FF0000; font-family:'Courier New'; font-weight:bold; font-size:20px; padding: 2px 5px;">
+                        0 0 1 3 3 7
+                    </td>
+                </tr>
+            </table>
+            <p><i id="hit-text">You are visitor number 1337!</i></p>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.wavy').forEach(function(el) {
+            var text = el.innerText;
+            el.innerHTML = '';
+            for (var i = 0; i < text.length; i++) {
+                var span = document.createElement('span');
+                span.innerText = text[i];
+                if (text[i] === ' ') span.innerHTML = '&nbsp;';
+                span.style.animationDelay = (i * 0.1) + 's';
+                el.appendChild(span);
+            }
+        });
+    </script>
+
+    <script>
+        let localVisits = localStorage.getItem('alien_juice_visits') || 0;
+        localVisits = parseInt(localVisits) + 1;
+        localStorage.setItem('alien_juice_visits', localVisits);
+
+        let launchDate = new Date("2026-01-01").getTime(); 
+        let now = new Date().getTime();
+        let minutesPassed = Math.floor((now - launchDate) / 1000 / 60);
+
+        let totalHits = 1337 + Math.floor(minutesPassed / 43) + localVisits;
+
+        let hitString = totalHits.toString().padStart(6, '0').split('').join(' ');
+
+        document.getElementById("hit-counter").innerText = hitString;
+        document.getElementById("hit-text").innerText = "You are visitor number " + totalHits + "!";
+    </script>
+
+    <script>
+        document.querySelectorAll('img').forEach(function(img) {
+            if (img.src.toLowerCase().includes('.gif')) {
+                
+                img.style.cursor = 'pointer';
+                
+                img.title = "Click to restart jif"; 
+                
+                img.onclick = function() {
+                    var cleanUrl = this.src.split('?')[0];
+                    this.src = cleanUrl + '?' + new Date().getTime();
+                };
+            }
+        });
+    </script>    
+
+</body>
+</html>
